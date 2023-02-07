@@ -4,6 +4,9 @@ var cityLatitude = 0.0;
 var cityLongitude = 0.0;
 var weatherToday = $('#today');
 var weatherForcast = $('#forecast');
+// var heading = $('<h>');
+// heading.text('5-Day Forecast: ');
+// weatherForcast.append(heading);
 
 
 if (localStorage.getItem("Cities") != null){
@@ -71,8 +74,9 @@ function fiveDayForcast(lat,long){
 
     // iconImg.attr('alt=','weather icon');
     headingDiv.text(response.city.name+" ( "+weatherdate+" )");
+    headingDiv.addClass("today-heading");
     
-    iconImg.attr("src",response.list[0].weather[0].icon+".png");
+    iconImg.attr("src","../images/"+response.list[0].weather[0].icon+".png");
     
     headingDiv.append(iconImg);
     firstDiv.text("Temp: "+response.list[0].main.temp+"'K");
@@ -93,16 +97,19 @@ function fiveDayForcast(lat,long){
         var headDiv= $('<div>');
         headDiv.addClass("col-sm fore-cast");
         var headingDiv = $('<div>');
+        var Image = $('<img>');
         var firstDiv = $('<div>');
         var secondDiv = $('<div>');
         var thirdDiv = $('<div>');
 
+        Image.attr("src","../images/"+response.list[count].weather[0].icon+".png");
         headingDiv.text(weatherdate);
         firstDiv.text("Temp: "+response.list[count].main.temp+"'K");
         secondDiv.text("Wind: "+response.list[count].wind.speed);
         thirdDiv.text("Humidity: "+response.list[count].main.humidity);
         
         headDiv.append(headingDiv);
+        headDiv.append(Image);
         headDiv.append(firstDiv);
         headDiv.append(secondDiv);
         headDiv.append(thirdDiv);
@@ -120,7 +127,7 @@ $("#search-button").on("click", function(event) {
 
     var CityName = document.getElementById("search-input").value;
     var index = cities.indexOf(CityName);
-    if (index == -1){
+    if (index == -1 && CityName != ''){
         cities.push(CityName);
         cityCoordinates(CityName);
        
