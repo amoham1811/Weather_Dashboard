@@ -1,87 +1,11 @@
-/* body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-} */
-
-#buttons {
-  /* vertical-align: left; */
-  float: right;
-  display: block; 
-  
-}
 .search-button, .delete-button {
   cursor: pointer;
+  border: solid;
+  color:aqua;
+  background-color:aqua;
   margin-top: 5px;
   margin-left: 15px;
-  width: 60px;
-  height: 25px;
+  height: 30px;
 }
 
 #foobar {
@@ -93,33 +17,63 @@ textarea {
   text-align: left;
 }
 
-#buttonID {
+/* #buttonID {
   float: right;
+} */
+.search-button{
+  width:200px;
 }
-
-.list-group button {
-    cursor: pointer;
-    display: block;
-    margin-bottom: 10px;
-    width: 100px;
-    height: 30px;
+.delete-button{
+  width: 100;
+  background-color: aqua;
+}
+#search-input{
+  width:300px;
 }
 
 .headers{
   display: none;
 }
-#heater-today{
+#header-today{
   display: inline;
 }
-
+.form {
+  margin-left:0;
+}
 .list-group button {
   cursor: pointer;
   display: block;
   margin-bottom: 10px;
-  width: 100px;
+  width: 300px;
   height: 30px;
 }
 #today {
   padding-left: 30px;
+  font-size: larger;
+  font-weight: 300px;
   border : solid;
+  height:300px;
+}
+#today div {
+  margin-top: 20px;
+}
+#forecast{
+  /* padding-left: 30px; */
+  height: 300px;
+  font-size: larger;
+  font: weight 300;
+  color: white;
+}
+.fore-cast {
+  background-color:darkslategray;
+  margin: 10px;
+  padding-top: 10px;
+}
+.fore-cast, div {
+  margin-top: 20px;
+  /* font-size: x-large; */
+} 
+.today-heading{
+  font-size: xx-large;
+  font-weight: bold;
 }
