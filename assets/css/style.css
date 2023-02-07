@@ -104,3 +104,22 @@ textarea {
     width: 100px;
     height: 30px;
 }
+
+.headers{
+  display: none;
+}
+#heater-today{
+  display: inline;
+}
+
+.list-group button {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 30px;
+}
+#today {
+  padding-left: 30px;
+  border : solid;
+}
