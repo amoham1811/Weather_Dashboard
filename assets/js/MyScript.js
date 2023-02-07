@@ -30,7 +30,7 @@ function cityCoordinates(searchCity){
     // API key
     var APIKey = "5d58e212fe391910382498dca0cb2836";
     // Build the URL to query the database for latitude and longitude information
-    var queryURL = "http://api.openweathermap.org/geo/1.0/direct?q="+searchCity+"&limit=5&appid="+APIKey
+    var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q="+searchCity+"&limit=5&appid="+APIKey
 
     // Create an AJAX call
     $.ajax({
@@ -53,7 +53,7 @@ function fiveDayForcast(lat,long){
     var APIKey = "5d58e212fe391910382498dca0cb2836";
     
     // Build the URL to query the database for 5 day weather forcast
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+long+"&appid="+APIKey
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+long+"&appid="+APIKey
     // Create an AJAX call
     $.ajax({
       url: queryURL,
